@@ -21,5 +21,5 @@ def process_file(filename):
 
 
 if __name__ == '__main__':
-	file_path = '.\\input\\duty.elf'
+	file_path = '.\\input\\sample.elf'
 	process_file(file_path)

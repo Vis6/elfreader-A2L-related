@@ -71,7 +71,7 @@ def get_section_info(elf_file):
 	"""
 	This function gets the information of each sections and save to a .txt file.
 	:param elf_file: the .elf file
-	:return: None (will print the section information)
+	:return: the section information)
 	"""
 	num_sections = elf_file.num_sections()  # the number of sections
 	section_info = []  # define a list to store dicts
@@ -120,17 +120,30 @@ def get_symbols(elf_file):
 		print('No symbol table found.')
 		return
 	else:
-		symbol_name_set = []
-
-		# loop for every symbole in the table
+		# loop for every symbol in the table and save
+		symbol_summary = []
 		for i in range(sym_table.num_symbols()):
 			symbol = sym_table.get_symbol(i)
 			symbol_name = symbol.name
-			symbol_name_offset = symbol['st_name']
+			symbol_name_offset = symbol['st_name']  # index into the object file's symbol string table
 			symbol_addr = symbol['st_value']
 			symbol_size = symbol['st_size']
 			symbol_info = symbol['st_info']
 			symbol_other = symbol['st_other']  # unused: 0 by default
 			symbol_sec = symbol['st_shndx']
-			symbol_name_set.append(symbol_name)
-	return symbol_name_set
+
+			symbol_dict = {'name': symbol_name, 'address': symbol_addr, 'size': symbol_size,
+			               'info': symbol_info, 'visibility': symbol_other, 'related section': symbol_sec}
+			symbol_summary.append(symbol_dict)
+
+	# convert to dataframe and print
+	symbol_summary_pd = pd.DataFrame(symbol_summary,
+	                                 columns=['name', 'address', 'size', 'info', 'visibility', 'related section'])
+	print("----------------------------------------------------\nSection Headers:")
+	print(tabulate(symbol_summary_pd, showindex=False, headers=symbol_summary_pd.columns))
+	print("----------------------------------------------------")
+
+	# save the section information
+	symbol_summary_pd.to_csv('.\\out\\symbol_summary.txt', sep='\t', index=False)
+
+	return symbol_summary

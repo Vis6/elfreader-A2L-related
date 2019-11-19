@@ -1,0 +1,19 @@
+Magic:	[127, 69, 76, 70]
+Class:	ELFCLASS32
+Data:	ELFDATA2LSB
+Version current:	EV_CURRENT
+OS/ABI:	ELFOSABI_SYSV
+ABI Version:	0
+Type:	ET_EXEC
+Machine:	EM_ARM
+Version:	EV_CURRENT
+Entry point address:	1048576
+Start of program headers:	52
+Start of section headers:	1157580
+Flags:	83887104
+Size of this header:	52
+Size of program headers:	32
+Number of program headers:	2
+Size of section headers:	40
+Number of section headers:	27
+Section header string table index:	26

@@ -60,7 +60,7 @@ def get_elf_header(file_path):
 	# print("----------------------------------------------------")
 
 	# save elf header info
-	with open('.\\out\\elf_header_info', 'w') as f:
+	with open('.\\out\\elf_header_info.txt', 'w') as f:
 		for keys, values in elf_header_info.items():
 			f.write("%s:\t%s\n" % (keys, str(values)))
 
@@ -103,12 +103,12 @@ def get_section_info(elf_file):
 	print("----------------------------------------------------")
 
 	# save the section information
-	section_info_pd.to_csv('.\\out\\section_info.txt', sep='\t', index=False)
+	section_info_pd.to_csv('.\\out\\section_info.csv', index=False)
 
 	return section_info
 
 
-def get_symbols(elf_file):
+def get_global_symbols(elf_file):
 	"""
 	Retrieve the symbols from the .elf file
 	:param elf_file: .elf file
@@ -144,6 +144,6 @@ def get_symbols(elf_file):
 	print("----------------------------------------------------")
 
 	# save the section information
-	symbol_summary_pd.to_csv('.\\out\\symbol_summary.txt', sep='\t', index=False)
+	symbol_summary_pd.to_csv('.\\out\\symbol_summary.csv', index=False)
 
 	return symbol_summary

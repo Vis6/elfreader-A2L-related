@@ -16,7 +16,7 @@ def process_file(filename):
 	"""
 	elf_file, elf_header_info = get_elf_header(filename)
 	elf_section_info = get_section_info(elf_file)  # retrieve the section information
-	symbol_set = get_symbols(elf_file)  # retrieve section info
+	global_symbol_set = get_global_symbols(elf_file)  # retrieve section info
 
 
 if __name__ == '__main__':

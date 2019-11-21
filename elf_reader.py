@@ -154,12 +154,13 @@ def get_global_symbols(elf_file):
 def get_debug_info(elf_file):  # TODO: finish this function
 	"""
 	Retrieve the debug information from elf file.
-	:param elf_file:
+	:param elf_file: .elf file
 	:return:
 	"""
-	debug_info = elf_file.get_section_by_name('.debug_info')
-	if not debug_info:
-		print('No debug info found.')
+	# examine dwarf info
+	if not elf_file.has_dwarf_info():
+		print("The file has no DWARF info.")
 		return
 	else:
-		pass
+		debug_info = elf_file.get_dwarf_info()
+		return

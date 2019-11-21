@@ -35,7 +35,7 @@ def a2l_variable_section_write(symbol_info):
 	with open('.\\out\\file.a2l', 'w') as f:
 		for item in extracted_symbol_info:
 			sym_name = item[0]
-			if sym_name != '':
+			if sym_name != '':  # if no variable name, don't add to a2l file
 				sym_addr = str(hex(item[1]))  # convert the address to hex format
 				sym_size = item[2]
 

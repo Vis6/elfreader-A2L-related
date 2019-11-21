@@ -18,6 +18,7 @@ def get_elf_header(file_path):
 	f = open(file_path, 'rb')  # open .elf file
 	f.seek(0)
 	elf_file = ELFFile(f)  # create an ELFFILE object
+	# f.close()
 
 	# extract the info from the header
 	elf_magic = elf_file['e_ident']['EI_MAG']
@@ -63,6 +64,7 @@ def get_elf_header(file_path):
 	with open('.\\out\\elf_header_info.txt', 'w') as f:
 		for keys, values in elf_header_info.items():
 			f.write("%s:\t%s\n" % (keys, str(values)))
+	f.close()
 
 	return elf_file, elf_header_info
 
@@ -147,3 +149,17 @@ def get_global_symbols(elf_file):
 	symbol_summary_pd.to_csv('.\\out\\symbol_summary.csv', index=False)
 
 	return symbol_summary
+
+
+def get_debug_info(elf_file):  # TODO: finish this function
+	"""
+	Retrieve the debug information from elf file.
+	:param elf_file:
+	:return:
+	"""
+	debug_info = elf_file.get_section_by_name('.debug_info')
+	if not debug_info:
+		print('No debug info found.')
+		return
+	else:
+		pass

@@ -151,7 +151,7 @@ def get_global_symbols(elf_file):
 	return symbol_summary
 
 
-def get_debug_info(elf_file):  # TODO: finish this function
+def get_debug_info(elf_file):  # TODO: finish this function; functions lacking in the pyelftools library
 	"""
 	Retrieve the debug information from elf file.
 	:param elf_file: .elf file
@@ -162,5 +162,8 @@ def get_debug_info(elf_file):  # TODO: finish this function
 		print("The file has no DWARF info.")
 		return
 	else:
-		debug_info = elf_file.get_dwarf_info()
+		dwarf_info = elf_file.get_dwarf_info()
+		debug_info = dwarf_info.debug_info_sec  # get .debug_info section in the elf file
+		# debug_pubtypes = dwarf_info.get_pubtypes()
+		# debug_pubnames = dwarf_info.get_pubnames()
 		return

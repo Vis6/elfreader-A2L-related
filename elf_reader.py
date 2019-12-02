@@ -11,7 +11,7 @@ from tabulate import tabulate
 
 def get_elf_header(file_path):
 	"""
-	This function reads the .elf file and return the information of the elf file
+	This function reads the .elf file and return the information of the elf file.
 	:param file_path: the path of the .elf file
 	:return: the information of the .elf file header
 	"""

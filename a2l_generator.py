@@ -1,5 +1,5 @@
 """
-Program to build am A2L file.
+Program to build an A2L file.
 Author: Ximu Zhang
 Date: 11/21/2019
 """

@@ -1,0 +1,53 @@
+    /begin CHARACTERISTIC enable_signal_input ""
+      VALUE 0x1C0034 __UBYTE 100 ulData000.CONVERSION 0 1
+      ECU_ADDRESS_EXTENSION 0x0
+      EXTENDED_LIMITS 0 1
+      BYTE_ORDER MSB_LAST
+      FORMAT "%.0"
+      /begin IF_DATA CANAPE_EXT
+        100
+        LINK_MAP "enable_signal_input" 0x1C0034 0x0 0 0x0 1 0x1 0x0
+        DISPLAY 0 0 2
+      /end IF_DATA
+    /end CHARACTERISTIC
+
+    /begin CHARACTERISTIC threshold_input ""
+      VALUE 0x1BE234 __UBYTE 100 ulData000.CONVERSION 0 99
+      ECU_ADDRESS_EXTENSION 0x0
+      EXTENDED_LIMITS 0 99
+      BYTE_ORDER MSB_LAST
+      FORMAT "%.3"
+      /begin IF_DATA CANAPE_EXT
+        100
+        LINK_MAP "threshold_input" 0x1BE234 0x0 0 0x0 1 0x1 0x0
+        DISPLAY 0 0 100
+      /end IF_DATA
+    /end CHARACTERISTIC
+
+    /begin MEASUREMENT threshold ""
+      UBYTE ulData000.CONVERSION 0 0 0 100
+      READ_WRITE
+      BYTE_ORDER MSB_LAST
+      ECU_ADDRESS 0x201B3A0
+      ECU_ADDRESS_EXTENSION 0x0
+      FORMAT "%.3"
+      /begin IF_DATA CANAPE_EXT
+        100
+        LINK_MAP "threshold" 0x201B3A0 0x0 0 0x0 0 0x0 0x0
+        DISPLAY 0 0 100
+      /end IF_DATA
+    /end MEASUREMENT
+
+    /begin MEASUREMENT enable_signal ""
+      UBYTE ulData000.CONVERSION 0 0 0 2
+      READ_WRITE
+      BYTE_ORDER MSB_LAST
+      ECU_ADDRESS 0x201B3A4
+      ECU_ADDRESS_EXTENSION 0x0
+      FORMAT "%.0"
+      /begin IF_DATA CANAPE_EXT
+        100
+        LINK_MAP "enable_signal" 0x201B3A4 0x0 0 0x0 0 0x0 0x0
+        DISPLAY 0 0 2
+      /end IF_DATA
+    /end MEASUREMENT

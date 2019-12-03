@@ -30,6 +30,6 @@ if __name__ == '__main__':
 	elf_header_info, elf_section_info, global_symbol_set = process_file(file_path)
 
 	# merge a2l files
-	a2l_file_path = '.\\input\\xx.a2l'
-	a2l_file_path2 = '.\\input\\xx.a2l'
-	combined_a2l_file = merge_a2l(a2l_file, a2lfile2)
+	a2l_file_path = '.\\input\\merge_a2l_1.a2l'
+	a2l_file_path2 = '.\\input\\merge_a2l_2.a2l'
+	combined_a2l_file = merge_a2l(a2l_file_path, a2l_file_path2)

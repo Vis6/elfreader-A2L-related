@@ -34,14 +34,19 @@ def merge_a2l_process(a2l_file_path):
 	"""
 	combined_measurement_variables = []
 	combined_parameter_variables = []
+	combined_compu_method = []
+	combined_compu_tab = []
+	combined_function = []
+	combined_record_layout = []
 
 	# r = root, d = directories, f = files
 	for r, d, f in os.walk(a2l_file_path):
 		for file in f:
 			if '.a2l' in file:
 				path = os.path.join(r, file)
-				combined_measurement_variables, combined_parameter_variables = merge_a2l(
-					combined_measurement_variables, combined_parameter_variables, path)
+				combined_measurement_variables, combined_parameter_variables, combined_compu_method, combined_compu_tab, combined_function, combined_record_layout = merge_a2l(
+					combined_measurement_variables, combined_parameter_variables, combined_compu_method,
+					combined_compu_tab, combined_function, combined_record_layout, path)
 
 	# combine the variables
 	combined_variables = combined_measurement_variables + combined_parameter_variables
@@ -50,7 +55,8 @@ def merge_a2l_process(a2l_file_path):
 	new_combined_variables = modify_address(combined_variables, global_symbol_set)
 
 	# form combined a2l file
-	form_combined_a2l(new_combined_variables)
+	form_combined_a2l(new_combined_variables, combined_compu_method, combined_compu_tab, combined_function,
+	                  combined_record_layout)
 
 
 if __name__ == '__main__':

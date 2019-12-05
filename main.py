@@ -47,10 +47,10 @@ def merge_a2l_process(a2l_file_path):
 	combined_variables = combined_measurement_variables + combined_parameter_variables
 
 	# modify the addresses using values from MAP file
-	modify_address(combined_variables, global_symbol_set)
+	new_combined_variables = modify_address(combined_variables, global_symbol_set)
 
 	# form combined a2l file
-	form_combined_a2l(combined_variables)
+	form_combined_a2l(new_combined_variables)
 
 
 if __name__ == '__main__':

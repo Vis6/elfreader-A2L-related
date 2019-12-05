@@ -7,7 +7,7 @@ Date: 12/02/2019
 
 def merge_a2l(measurement, parameter, a2l_file_path):
 	"""
-	Function to merge a2l file.
+	Function to merge a2l file. (currently only merge the characteristic and measurement parts)
 	:param measurement: combination of measurement
 	:param parameter: combination of parameter
 	:param a2l_file_path: single a2l file path

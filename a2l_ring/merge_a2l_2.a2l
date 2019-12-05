@@ -1,77 +1,77 @@
-        /begin CHARACTERISTIC
-            pbuf_copy_partial	/* Name */
-            "Current achieved signal SNA override enable."	/* LongIdentifier */
-            VALUE	/* Type */
-            0x0000	/* Address */
-            UBYTE_COL_DIRECT	/* Deposit */
-            0	/* MaxDiff */
-            VOID_SCALING_CRFR_a	/* Conversion */
-            0	/* LowerLimit */
-            1	/* UpperLimit */
-            BYTE_ORDER MSB_LAST
-        /end CHARACTERISTIC
+    /begin CHARACTERISTIC
+        pbuf_copy_partial	/* Name */
+        "Current achieved signal SNA override enable."	/* LongIdentifier */
+        VALUE	/* Type */
+        0x0000	/* Address */
+        UBYTE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        VOID_SCALING_CRFR_a	/* Conversion */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BYTE_ORDER MSB_LAST
+    /end CHARACTERISTIC
 
-        /begin CHARACTERISTIC
-            udp_disconnect	/* Name */
-            "Current achieved signal SNA override value."	/* LongIdentifier */
-            VALUE	/* Type */
-            0x0000	/* Address */
-            UBYTE_COL_DIRECT	/* Deposit */
-            0	/* MaxDiff */
-            VOID_SCALING_CRFR_a	/* Conversion */
-            0	/* LowerLimit */
-            1	/* UpperLimit */
-            BYTE_ORDER MSB_LAST
-        /end CHARACTERISTIC
+    /begin CHARACTERISTIC
+        udp_disconnect	/* Name */
+        "Current achieved signal SNA override value."	/* LongIdentifier */
+        VALUE	/* Type */
+        0x0000	/* Address */
+        UBYTE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        VOID_SCALING_CRFR_a	/* Conversion */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BYTE_ORDER MSB_LAST
+    /end CHARACTERISTIC
 
-        /begin CHARACTERISTIC
-            memp_TCP_PCB	/* Name */
-            "single value used to override the currentcontroller target bandwidth for calibration of non-ED units"	/* LongIdentifier */
-            VALUE	/* Type */
-            0x0000	/* Address */
-            FLOAT32_IEEE_COL_DIRECT	/* Deposit */
-            0	/* MaxDiff */
-            Hertz_sc	/* Conversion */
-            -3.4028234663852886e38	/* LowerLimit */
-            3.4028234663852886e38	/* UpperLimit */
-            BYTE_ORDER MSB_LAST
-        /end CHARACTERISTIC
+    /begin CHARACTERISTIC
+        memp_TCP_PCB	/* Name */
+        "single value used to override the currentcontroller target bandwidth for calibration of non-ED units"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x0000	/* Address */
+        FLOAT32_IEEE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        Hertz_sc	/* Conversion */
+        -3.4028234663852886e38	/* LowerLimit */
+        3.4028234663852886e38	/* UpperLimit */
+        BYTE_ORDER MSB_LAST
+    /end CHARACTERISTIC
 
-        /begin MEASUREMENT
-            XEmacPs_StubHandler	/* Name */
-            "Quadrature axis stator current, filtered."	/* LongIdentifier */
-            FLOAT32_IEEE	/* Datatype */
-            VOID_SCALING_CRFR	/* Conversion */
-            1	/* Resolution */
-            100	/* Accuracy */
-            -3.4028234663852886e38	/* LowerLimit */
-            3.4028234663852886e38	/* UpperLimit */
-            ECU_ADDRESS 0x0000
-            BYTE_ORDER MSB_LAST
-        /end MEASUREMENT
+    /begin MEASUREMENT
+        XEmacPs_StubHandler	/* Name */
+        "Quadrature axis stator current, filtered."	/* LongIdentifier */
+        FLOAT32_IEEE	/* Datatype */
+        VOID_SCALING_CRFR	/* Conversion */
+        1	/* Resolution */
+        100	/* Accuracy */
+        -3.4028234663852886e38	/* LowerLimit */
+        3.4028234663852886e38	/* UpperLimit */
+        ECU_ADDRESS 0x0000
+        BYTE_ORDER MSB_LAST
+    /end MEASUREMENT
 
-        /begin MEASUREMENT
-            sys_arch_protect	/* Name */
-            ""	/* LongIdentifier */
-            FLOAT32_IEEE	/* Datatype */
-            VOID_SCALING_CRFR	/* Conversion */
-            1	/* Resolution */
-            100	/* Accuracy */
-            -3.4028234663852886e38	/* LowerLimit */
-            3.4028234663852886e38	/* UpperLimit */
-            ECU_ADDRESS 0x0000
-            BYTE_ORDER MSB_LAST
-        /end MEASUREMENT
+    /begin MEASUREMENT
+        sys_arch_protect	/* Name */
+        ""	/* LongIdentifier */
+        FLOAT32_IEEE	/* Datatype */
+        VOID_SCALING_CRFR	/* Conversion */
+        1	/* Resolution */
+        100	/* Accuracy */
+        -3.4028234663852886e38	/* LowerLimit */
+        3.4028234663852886e38	/* UpperLimit */
+        ECU_ADDRESS 0x0000
+        BYTE_ORDER MSB_LAST
+    /end MEASUREMENT
 
-        /begin MEASUREMENT
-            transfer_data	/* Name */
-            ""	/* LongIdentifier */
-            FLOAT32_IEEE	/* Datatype */
-            VOID_SCALING_CRFR	/* Conversion */
-            1	/* Resolution */
-            100	/* Accuracy */
-            -3.4028234663852886e38	/* LowerLimit */
-            3.4028234663852886e38	/* UpperLimit */
-            ECU_ADDRESS 0x0000
-            BYTE_ORDER MSB_LAST
-        /end MEASUREMENT
+    /begin MEASUREMENT
+        transfer_data	/* Name */
+        ""	/* LongIdentifier */
+        FLOAT32_IEEE	/* Datatype */
+        VOID_SCALING_CRFR	/* Conversion */
+        1	/* Resolution */
+        100	/* Accuracy */
+        -3.4028234663852886e38	/* LowerLimit */
+        3.4028234663852886e38	/* UpperLimit */
+        ECU_ADDRESS 0x0000
+        BYTE_ORDER MSB_LAST
+    /end MEASUREMENT

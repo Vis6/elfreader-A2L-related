@@ -1,77 +1,77 @@
-        /begin CHARACTERISTIC
-            eth_link_status	/* Name */
-            "Switch to enable(1) or disable(0) the override of the currentcontroller IGain factor for calibration of non-ED units"	/* LongIdentifier */
-            VALUE	/* Type */
-            0x0000	/* Address */
-            UBYTE_COL_DIRECT	/* Deposit */
-            0	/* MaxDiff */
-            VOID_SCALING_CRFR_a	/* Conversion */
-            0	/* LowerLimit */
-            1	/* UpperLimit */
-            BYTE_ORDER MSB_LAST
-        /end CHARACTERISTIC
+    /begin CHARACTERISTIC
+        eth_link_status	/* Name */
+        "Switch to enable(1) or disable(0) the override of the currentcontroller IGain factor for calibration of non-ED units"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x0000	/* Address */
+        UBYTE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        VOID_SCALING_CRFR_a	/* Conversion */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BYTE_ORDER MSB_LAST
+    /end CHARACTERISTIC
 
-        /begin CHARACTERISTIC
-            memp_memory_TCP_SEG_base	/* Name */
-            "Switch to enable(1) or disable(0) the override of the currentcontroller target bandwidth for calibration of non-ED units"	/* LongIdentifier */
-            VALUE	/* Type */
-            0x0000	/* Address */
-            UBYTE_COL_DIRECT	/* Deposit */
-            0	/* MaxDiff */
-            VOID_SCALING_CRFR_a	/* Conversion */
-            0	/* LowerLimit */
-            1	/* UpperLimit */
-            BYTE_ORDER MSB_LAST
-        /end CHARACTERISTIC
+    /begin CHARACTERISTIC
+        memp_memory_TCP_SEG_base	/* Name */
+        "Switch to enable(1) or disable(0) the override of the currentcontroller target bandwidth for calibration of non-ED units"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x0000	/* Address */
+        UBYTE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        VOID_SCALING_CRFR_a	/* Conversion */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BYTE_ORDER MSB_LAST
+    /end CHARACTERISTIC
 
-        /begin CHARACTERISTIC
-            Xil_ICacheInvalidate	/* Name */
-            "Switch to enable(1) or disable(0) the override of the currentcontroller gain for calibration of non-ED units"	/* LongIdentifier */
-            VALUE	/* Type */
-            0x0000	/* Address */
-            UBYTE_COL_DIRECT	/* Deposit */
-            0	/* MaxDiff */
-            VOID_SCALING_CRFR_a	/* Conversion */
-            0	/* LowerLimit */
-            1	/* UpperLimit */
-            BYTE_ORDER MSB_LAST
-        /end CHARACTERISTIC
+    /begin CHARACTERISTIC
+        Xil_ICacheInvalidate	/* Name */
+        "Switch to enable(1) or disable(0) the override of the currentcontroller gain for calibration of non-ED units"	/* LongIdentifier */
+        VALUE	/* Type */
+        0x0000	/* Address */
+        UBYTE_COL_DIRECT	/* Deposit */
+        0	/* MaxDiff */
+        VOID_SCALING_CRFR_a	/* Conversion */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        BYTE_ORDER MSB_LAST
+    /end CHARACTERISTIC
 
-        /begin MEASUREMENT
-            duty_cycle	/* Name */
-            "Current SNA."	/* LongIdentifier */
-            UBYTE	/* Datatype */
-            VOID_SCALING_CRFR_a	/* Conversion */
-            1	/* Resolution */
-            100	/* Accuracy */
-            0	/* LowerLimit */
-            1	/* UpperLimit */
-            ECU_ADDRESS 0x0000
-            BYTE_ORDER MSB_LAST
-        /end MEASUREMENT
+    /begin MEASUREMENT
+        duty_cycle	/* Name */
+        "Current SNA."	/* LongIdentifier */
+        UBYTE	/* Datatype */
+        VOID_SCALING_CRFR_a	/* Conversion */
+        1	/* Resolution */
+        100	/* Accuracy */
+        0	/* LowerLimit */
+        1	/* UpperLimit */
+        ECU_ADDRESS 0x0000
+        BYTE_ORDER MSB_LAST
+    /end MEASUREMENT
 
-        /begin MEASUREMENT
-            dividend	/* Name */
-            "Current controller bandwidth."	/* LongIdentifier */
-            FLOAT32_IEEE	/* Datatype */
-            Hertz_sc	/* Conversion */
-            1	/* Resolution */
-            100	/* Accuracy */
-            -3.4028234663852886e38	/* LowerLimit */
-            3.4028234663852886e38	/* UpperLimit */
-            ECU_ADDRESS 0x0000
-            BYTE_ORDER MSB_LAST
-        /end MEASUREMENT
+    /begin MEASUREMENT
+        dividend	/* Name */
+        "Current controller bandwidth."	/* LongIdentifier */
+        FLOAT32_IEEE	/* Datatype */
+        Hertz_sc	/* Conversion */
+        1	/* Resolution */
+        100	/* Accuracy */
+        -3.4028234663852886e38	/* LowerLimit */
+        3.4028234663852886e38	/* UpperLimit */
+        ECU_ADDRESS 0x0000
+        BYTE_ORDER MSB_LAST
+    /end MEASUREMENT
 
-        /begin MEASUREMENT
-            xemacpsif_input	/* Name */
-            "Direct axis stator current, filtered."	/* LongIdentifier */
-            FLOAT32_IEEE	/* Datatype */
-            Ampere_sc	/* Conversion */
-            1	/* Resolution */
-            100	/* Accuracy */
-            -3.4028234663852886e38	/* LowerLimit */
-            3.4028234663852886e38	/* UpperLimit */
-            ECU_ADDRESS 0x0000
-            BYTE_ORDER MSB_LAST
-        /end MEASUREMENT
+    /begin MEASUREMENT
+        xemacpsif_input	/* Name */
+        "Direct axis stator current, filtered."	/* LongIdentifier */
+        FLOAT32_IEEE	/* Datatype */
+        Ampere_sc	/* Conversion */
+        1	/* Resolution */
+        100	/* Accuracy */
+        -3.4028234663852886e38	/* LowerLimit */
+        3.4028234663852886e38	/* UpperLimit */
+        ECU_ADDRESS 0x0000
+        BYTE_ORDER MSB_LAST
+    /end MEASUREMENT
